@@ -48,7 +48,6 @@ body { margin: 0; background: var(--background); color: var(--foreground); }
 .markdown-body article > :last-child { margin-bottom: 0; }
 .page-nav { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
 .page-nav [aria-current="page"] { color: var(--foreground); font-weight: 600; }
-.welcome { max-width: 720px; }
 .welcome-links { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
 .welcome-links a { padding: 20px; border: 1px solid var(--border); border-radius: 6px; background: var(--subtle); text-align: center; font-weight: 600; }
 .welcome-links a:hover { border-color: var(--link); }
