@@ -1,3 +1,4 @@
+
 // Extra breathing room at the top of every page (independent of section padding).
 #let page-top-padding = 0.5cm
 
@@ -5,6 +6,11 @@
 #let section-padding = (
   top: 0.65cm, bottom: 0.75cm,
   left: 1.5cm, right: 1.5cm
+)
+
+#let heading-padding = (
+  left: 1.5cm, right: 1.5cm,
+  top: 1cm, bottom: 0cm
 )
 
 #let accent-color = rgb("#125b49")

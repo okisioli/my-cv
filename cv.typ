@@ -3,18 +3,11 @@
   paper: "a4",
 )
 
-#import "./typst/theme.typ": cv-theme
+#import "./typst/theme.typ": *
 #import "./typst/components.typ": *
 
 #show: cv-theme
 
-
-#let heading-padding = (
-  left: 1.5cm, right: 1.5cm,
-  top: 1cm, bottom: 0cm
-)
-
-// #set text(font: "Georgia", size: 11pt)
 #set text(font: "Bahnschrift", spacing: 0.35em)
 
 #let section-contact() = block[
