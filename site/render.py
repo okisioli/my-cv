@@ -3,7 +3,7 @@
 Run `python site/render.py` from any directory. GITHUB_TOKEN is optional locally
 and supplied by Actions; GITHUB_REPOSITORY supplies the Markdown link context.
 README.md and PROJECTS.md supply /cv/ and /projects/. The welcome page is HTML.
-Edit index.html for welcome copy, page.html for the shared Markdown page wrapper,
+Edit index.html for the welcome HTML, page.html for the shared page wrapper,
 and style.css for presentation. No Markdown content is duplicated in HTML.
 The publish workflow combines this output with both Windows-built PDFs.
 """
@@ -42,31 +42,43 @@ def render_markdown(markdown):
     return content
 
 
+def render_page(template, slug, title, description, content):
+    current = ' aria-current="page"'
+    return template.substitute(
+        title=title,
+        description=description,
+        content=content,
+        site_root="../" if slug else "./",
+        home_current=current if not slug else "",
+        cv_current=current if slug == "cv" else "",
+        projects_current=current if slug == "projects" else "",
+    )
+
+
 def main():
     root = Path(__file__).resolve().parents[1]
     source = root / "site"
     output = root / "build" / "public"
     output.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(source / "index.html", output / "index.html")
     shutil.copyfile(source / "style.css", output / "style.css")
     template = Template((source / "page.html").read_text(encoding="utf-8"))
 
+    home = render_page(
+        template, "", "Oliver Gašpar", "Oliver's CV and personal projects.",
+        (source / "index.html").read_text(encoding="utf-8"),
+    )
+    (output / "index.html").write_text(home, encoding="utf-8")
+
     for filename, slug, title, description in (
-        ("README.md", "cv", "CV", "Oliver's CV and resume download."),
-        ("PROJECTS.md", "projects", "Projects", "Oliver's personal projects."),
+        ("README.md", "cv", "CV | Oliver Gašpar", "Oliver's CV and resume download."),
+        ("PROJECTS.md", "projects", "Projects | Oliver Gašpar", "Oliver's personal projects."),
     ):
         markdown = (root / filename).read_text(encoding="utf-8")
         # The README uses absolute links so its downloads also work on GitHub.
         if filename == "README.md":
             for pdf in ("cv-light.pdf", "cv-dark.pdf"):
                 markdown = markdown.replace(f"https://okisioli.github.io/my-cv/{pdf}", f"../{pdf}")
-        page = template.substitute(
-            title=title,
-            description=description,
-            content=render_markdown(markdown),
-            cv_current=' aria-current="page"' if slug == "cv" else "",
-            projects_current=' aria-current="page"' if slug == "projects" else "",
-        )
+        page = render_page(template, slug, title, description, render_markdown(markdown))
         destination = output / slug / "index.html"
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_text(page, encoding="utf-8")
