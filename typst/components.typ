@@ -102,7 +102,7 @@
                   *#role*
                 ]
               ]],
-              [#block(inset: (bottom: 0em))[
+              [#block(inset: (bottom: 1em))[
                 #text(fill: accent-color)[
                   *#dates*
                 ]
