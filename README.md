@@ -12,51 +12,12 @@ You can find more information about me, my coding experience, and personal proje
 If you're still reading, please continue. You can view the CV in its raw form [right here on GitHub](https://github.com/okisioli/my-cv/blob/main/cv.typ).
 If you prefer a more traditional PDF-like experience, there's two ways to get it up and running.
 
-## Download the PDF 📦
-
-For your convenience (and HR), an up-to-date version can be downloaded below:
-
-- [Light Mode](https://okisioli.github.io/my-cv/cv-light.pdf)
-- [Dark Mode](https://okisioli.github.io/my-cv/cv-dark.pdf)
-
 ## Build it yourself (recommended) 🛠️
 
 ### Install Typst
 
 You'll need [Typst](https://typst.app/) to compile the document for a better reading experience.
-You can install it using one of the options below, based on your OS and package manager of choice.
-
-#### Windows
-
-WinGet
-
-```powershell
-winget install --id Typst.Typst -e
-```
-
-Chocolatey
-
-```powershell
-choco install typst
-```
-
-Scoop
-
-```powershell
-scoop install typst
-```
-
-#### Linux
-
-Follow the [Typst installation instructions](https://typst.app/open-source/#download/).
-
-#### macOS
-
-Homebrew
-
-```bash
-brew install typst
-```
+Follow the [installation instructions](https://typst.app/open-source/#download/) to get Typst up and running on your platform.
 
 ### Compile the CV
 
@@ -73,3 +34,10 @@ If the default CV is too bright, you can compile it with the lights off.
 ```bash
 typst compile --input mode=dark cv.typ cv-dark.pdf
 ```
+
+## Download the PDF 📦
+
+For your convenience (and HR), an up-to-date version can be downloaded below:
+
+- [Light Mode](https://okisioli.github.io/my-cv/cv-light.pdf)
+- [Dark Mode](https://okisioli.github.io/my-cv/cv-dark.pdf)
