@@ -9,7 +9,7 @@ You can find more information about me, my coding experience, and personal proje
 🤔 "maybe not a good idea to put this in a public repo"
 ```
 
-If you're still reading, please continue. You can view the CV in its raw form [right here on GitHub](https://github.com/okisioli/my-cv/blob/main/cv.typ).
+If you're still reading, please continue. You can [view the CV in its raw form right here on GitHub](https://github.com/okisioli/my-cv/blob/main/cv.json).
 If you prefer a more traditional PDF-like experience, there's two ways to get it up and running.
 
 ## Build it yourself (recommended) 🛠️
