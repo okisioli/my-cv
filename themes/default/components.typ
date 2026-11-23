@@ -199,7 +199,9 @@
 
 #let project-list(items) = {
   if items.len() == 0 { return [] }
-  list(..items.map(item => [
+  list(..items.map(item => if type(item) == str {
+    markdown(item)
+  } else [
     #markdown(item.text)
     #project-list(item.at("children", default: ()))
   ]))

@@ -99,12 +99,8 @@
               ]
             },
             "items": [
-              {
-                "text": "Integrated key parts of a **custom WPF framework** into a mission-critical application under a tight deadline."
-              },
-              {
-                "text": "Added meaningful improvements to several custom widgets to support their **long-term usability** and maintainability."
-              }
+              "Integrated key parts of a **custom WPF framework** into a mission-critical application under a tight deadline.",
+              "Added meaningful improvements to several custom widgets to support their **long-term usability** and maintainability."
             ]
           }
         ]
@@ -123,24 +119,12 @@
               ]
             },
             "items": [
-              {
-                "text": "Delivered **UX and usability improvements** ahead of a major sports event, earning **direct recognition from NBC**."
-              },
-              {
-                "text": "**Refactored operation-critical components**, eliminating a long-standing defect responsible for recurring customer issues."
-              },
-              {
-                "text": "**Improved stability and maintainability** of a **complex hybrid WPF/Windows Forms** application through bug fixes, refactoring, and modernization efforts."
-              },
-              {
-                "text": "Developed new features and maintained production-critical functionality."
-              },
-              {
-                "text": "Contributed to the ongoing migration from Windows Forms to WPF."
-              },
-              {
-                "text": "Created **internal tools** that improved productivity for developers and SQA."
-              }
+              "Delivered **UX and usability improvements** ahead of a major sports event, earning **direct recognition from NBC**.",
+              "**Refactored operation-critical components**, eliminating a long-standing defect responsible for recurring customer issues.",
+              "**Improved stability and maintainability** of a **complex hybrid WPF/Windows Forms** application through bug fixes, refactoring, and modernization efforts.",
+              "Developed new features and maintained production-critical functionality.",
+              "Contributed to the ongoing migration from Windows Forms to WPF.",
+              "Created **internal tools** that improved productivity for developers and SQA."
             ]
           },
           {
@@ -154,18 +138,10 @@
               ]
             },
             "items": [
-              {
-                "text": "Developed backend services using **ASP.NET Core**."
-              },
-              {
-                "text": "Implemented **new API endpoints** and exposed them through **gRPC**."
-              },
-              {
-                "text": "**Integrated a major audio-mixing feature** from the previous project."
-              },
-              {
-                "text": "Maintained strong focus on code quality and **test-driven development**."
-              }
+              "Developed backend services using **ASP.NET Core**.",
+              "Implemented **new API endpoints** and exposed them through **gRPC**.",
+              "**Integrated a major audio-mixing feature** from the previous project.",
+              "Maintained strong focus on code quality and **test-driven development**."
             ]
           },
           {
@@ -179,15 +155,9 @@
               ]
             },
             "items": [
-              {
-                "text": "Had a voice in shaping a brand-new product on top of an established"
-              },
-              {
-                "text": "**Was responsible for** major parts of the **new UI and features**."
-              },
-              {
-                "text": "Contributed to **engine-level features** and business logic."
-              }
+              "Had a voice in shaping a brand-new product on top of an established",
+              "**Was responsible for** major parts of the **new UI and features**.",
+              "Contributed to **engine-level features** and business logic."
             ]
           }
         ]
@@ -206,24 +176,12 @@
               ]
             },
             "items": [
-              {
-                "text": "Independently developed a **native Android** application in Java **from scratch**."
-              },
-              {
-                "text": "Delivered a **polished UI** ready for backend integration."
-              },
-              {
-                "text": "Joined development of a Forex trading **desktop platform**."
-              },
-              {
-                "text": "Led major parts of **WPF UI** implementation and performance optimization."
-              },
-              {
-                "text": "Contributed to **architecture decisions** and engineering best practices."
-              },
-              {
-                "text": "Experimented with **Flutter** as part of internal research efforts."
-              }
+              "Independently developed a **native Android** application in Java **from scratch**.",
+              "Delivered a **polished UI** ready for backend integration.",
+              "Joined development of a Forex trading **desktop platform**.",
+              "Led major parts of **WPF UI** implementation and performance optimization.",
+              "Contributed to **architecture decisions** and engineering best practices.",
+              "Experimented with **Flutter** as part of internal research efforts."
             ]
           }
         ]
@@ -257,15 +215,9 @@
               ]
             },
             "items": [
-              {
-                "text": "Deliveder a small, interactive Android app aimed at children by myself"
-              },
-              {
-                "text": "**Integrated video advertising** into the mobile application of a **major Czech radio** station."
-              },
-              {
-                "text": "Worked on a new application combining concepts from recruitment platforms and social-media-style stories in a small team of three."
-              }
+              "Deliveder a small, interactive Android app aimed at children by myself",
+              "**Integrated video advertising** into the mobile application of a **major Czech radio** station.",
+              "Worked on a new application combining concepts from recruitment platforms and social-media-style stories in a small team of three."
             ]
           }
         ]
@@ -283,24 +235,12 @@
               ]
             },
             "items": [
-              {
-                "text": "**Owned Android implementation** and most platform-specific integrations."
-              },
-              {
-                "text": "Collaborated on UI design, adapting shared designs to Android while **advocating for native Android user experience**."
-              },
-              {
-                "text": "**Integrated observability platforms** like Firebase Crashlytics and Sentry"
-              },
-              {
-                "text": "**Migrated our version control** system of choice from TFS **to Git**"
-              },
-              {
-                "text": "Helped shape a unique concept combining an alarm clock with social networking features."
-              },
-              {
-                "text": "The released app **won both main awards at Czech AppParade 25**."
-              }
+              "**Owned Android implementation** and most platform-specific integrations.",
+              "Collaborated on UI design, adapting shared designs to Android while **advocating for native Android user experience**.",
+              "**Integrated observability platforms** like Firebase Crashlytics and Sentry",
+              "**Migrated our version control** system of choice from TFS **to Git**",
+              "Helped shape a unique concept combining an alarm clock with social networking features.",
+              "The released app **won both main awards at Czech AppParade 25**."
             ]
           }
         ]
@@ -318,12 +258,8 @@
               ]
             },
             "items": [
-              {
-                "text": "Developed and maintained public-facing websites for the Faculty of Law."
-              },
-              {
-                "text": "Developed and **maintained internal systems** used by the faculty's employees, researchers and external collaborators."
-              }
+              "Developed and maintained public-facing websites for the Faculty of Law.",
+              "Developed and **maintained internal systems** used by the faculty's employees, researchers and external collaborators."
             ]
           }
         ]
@@ -344,21 +280,11 @@
           ]
         },
         "items": [
-          {
-            "text": "A **Slovak equivalent of Groupon** (a local deals aggregator), for which I handled the entire front end and visual design"
-          },
-          {
-            "text": "Modernization and maintenance of an **OpenCart-based e-commerce website** for a nationwide retailer of bicycle parts and accessories"
-          },
-          {
-            "text": "Redesign of several websites for a Prague-based business offering city tours, experiences, and stag parties"
-          },
-          {
-            "text": "A complete website for a small, family-run tennis coaching business"
-          },
-          {
-            "text": "Website for a local non-profit helping women with cancer"
-          }
+          "A **Slovak equivalent of Groupon** (a local deals aggregator), for which I handled the entire front end and visual design",
+          "Modernization and maintenance of an **OpenCart-based e-commerce website** for a nationwide retailer of bicycle parts and accessories",
+          "Redesign of several websites for a Prague-based business offering city tours, experiences, and stag parties",
+          "A complete website for a small, family-run tennis coaching business",
+          "Website for a local non-profit helping women with cancer"
         ]
       }
     ]
@@ -373,32 +299,16 @@
           {
             "text": "An experimental suite of .NET apps with an **unique approach to getting familiar with a foreign language**. Uses **OpenAI APIs**, and consists mostly of...",
             "children": [
-              {
-                "text": "A **Telegram Bot** that **tranlates** text, **transcribes** voice messages, and **speaks** to you in the language of your choosing"
-              },
-              {
-                "text": "A web UI which provides **subtitles for social media content** (Reels, TikToks, YouTube) in the chosen language"
-              },
-              {
-                "text": "An **ASP.NET** app serving both above use cases"
-              },
-              {
-                "text": "A **desktop GUI** for further fine-tuning the translated content"
-              }
+              "A **Telegram Bot** that **tranlates** text, **transcribes** voice messages, and **speaks** to you in the language of your choosing",
+              "A web UI which provides **subtitles for social media content** (Reels, TikToks, YouTube) in the chosen language",
+              "An **ASP.NET** app serving both above use cases",
+              "A **desktop GUI** for further fine-tuning the translated content"
             ]
           },
-          {
-            "text": "A personal **spending tracking app with an LLM twist**. Cross-platform, made in .NET using **Avalonia**, with **backend-as-a-service** through **Supabase**."
-          },
-          {
-            "text": "**Android app turning** user's favorite **camera roll footage into live wallpapers**, chosen on random on every screen unlock"
-          },
-          {
-            "text": "Early-stage **restaurant rating** application with an unique take on the discovery experience, build on the **Java** stack with Spring Boot."
-          },
-          {
-            "text": "A developer-focused **static site generator** (or, a .NET project template) to bootstrap a site on GitHub Pages with minimum effort, backed by **JSON content**"
-          }
+          "A personal **spending tracking app with an LLM twist**. Cross-platform, made in .NET using **Avalonia**, with **backend-as-a-service** through **Supabase**.",
+          "**Android app turning** user's favorite **camera roll footage into live wallpapers**, chosen on random on every screen unlock",
+          "Early-stage **restaurant rating** application with an unique take on the discovery experience, build on the **Java** stack with Spring Boot.",
+          "A developer-focused **static site generator** (or, a .NET project template) to bootstrap a site on GitHub Pages with minimum effort, backed by **JSON content**"
         ]
       }
     ]
