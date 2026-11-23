@@ -1,14 +1,8 @@
 #set document(title: "Oliver Gašpar CV", author: "Oliver Gašpar")
-#set page(
-  paper: "a4",
-)
-
 #import "./typst/theme.typ": *
 #import "./typst/components.typ": *
 
 #show: cv-theme
-
-#set text(font: "Bahnschrift", spacing: 0.35em)
 
 #let section-contact() = block[
     *Phone*: #link("tel:+421949853547")[+421 949 853 547] \
@@ -31,7 +25,7 @@
 )
 
 #block(inset: heading-padding)[
-  #text(size: 1.8em, fill: accent-color)[
+  #text(..section-title-text)[
     Introduction
   ]
 ]
@@ -53,7 +47,7 @@
       columns: (1), [
         #grid(
           columns: (1fr, 1fr, 1fr),
-          gutter: 1.2cm,
+          gutter: skills-grid-gutter,
           [
             #skills-column(
               "Languages & Tech stack",
@@ -110,8 +104,8 @@
 
 #block-top-2()[
 
-  #block(inset: (top:1.6em, bottom: 0.5em))[
-    #text(size: 1.8em, fill: accent-color)[
+  #block(inset: experience-heading-inset)[
+    #text(..section-title-text)[
       Professional experience
     ]
   ]
@@ -141,7 +135,7 @@
     [
       #block-project(
         text[
-          #block(inset: (top: -0em))[
+          #block(inset: project-title-inset)[
             === PRIME
           ]
           Worked on the company's *flagship broadcast graphics platform* with a real-time playout system where *reliability and responsiveness* were *_critical_*.
@@ -163,7 +157,7 @@
 
         #block-project(
           text[
-            #block(inset: (top: -0em))[
+            #block(inset: project-title-inset)[
               === LIVE
             ]
             Took a major part in building a greenfield project -- *a cloud-oriented platform* exposing the functionality of the company's primary product through web technologies.],
@@ -182,7 +176,7 @@
 
           #block-project(
             text[
-              #block(inset: (top: -0em))[
+              #block(inset: project-title-inset)[
                 === PRIME Switcher
               ]
               Worked in a small team building a new, specialized product wrapped around the company's established broadcast platform.],
@@ -356,7 +350,7 @@ Worked on multiple short- and long-term *projects across platforms and stacks* i
 ]
 
 #block-top-1()[
-#grid(column-gutter: 1em,
+#grid(column-gutter: footer-grid-column-gutter,
   columns: (3fr, 2fr, 2fr),
   [
     = Languages
@@ -368,8 +362,8 @@ Worked on multiple short- and long-term *projects across platforms and stacks* i
       [Czech], [Native],
       [German], [Elementary],
     )
-    #block(inset: (top: 1.5em))
-      #text(size: 2em)[
+    #block(inset: footer-contact-style.inset)
+      #text(size: footer-contact-style.text-size)[
         +421949853547
       ]
       oliver.g.sk\@gmail.com
