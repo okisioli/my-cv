@@ -38,8 +38,7 @@
   below: 1.25em,
   marker: text(fill: accent-color)[█],
 )
-#let section-rule-spacing = (above: 0.65em, below: 1.5em)
-#let section-rule-line = (length: 100%, stroke: 1pt)
+#let project-separator-spacing = (above: 0.65em, below: 1.5em)
 #let tip-style = (
   fill: rgb("#eef6ff"),
   inset: 0.8em,

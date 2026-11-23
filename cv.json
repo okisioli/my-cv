@@ -94,7 +94,9 @@
             "details": {
               "role": ".NET Developer",
               "dates": "Nov 2025 – Feb 2026",
-              "technology": "C# / .NET, WPF"
+              "technology": [
+                "C# / .NET, WPF"
+              ]
             },
             "items": [
               {
@@ -116,7 +118,9 @@
             "details": {
               "role": ".NET Developer",
               "dates": "Sep 2022 – Oct 2025",
-              "technology": "C# / .NET, WPF, WinForms, ASP.NET Core, gRPC, Jenkins"
+              "technology": [
+                "C# / .NET, WPF, WinForms, ASP.NET Core, gRPC, Jenkins"
+              ]
             },
             "items": [
               {
@@ -145,7 +149,9 @@
             "details": {
               "role": ".NET Developer",
               "dates": "Oct 2021 – Sep 2022",
-              "technology": "C# / .NET, ASP.NET Core, gRPC, Mapster, xUnit"
+              "technology": [
+                "C# / .NET, ASP.NET Core, gRPC, Mapster, xUnit"
+              ]
             },
             "items": [
               {
@@ -168,7 +174,9 @@
             "details": {
               "role": ".NET Developer",
               "dates": "Oct 2020 – Sep 2021",
-              "technology": "C# / .NET, WPF"
+              "technology": [
+                "C# / .NET, WPF"
+              ]
             },
             "items": [
               {
@@ -192,7 +200,10 @@
             "details": {
               "role": "Software Developer",
               "dates": "Apr 2018 – Sep 2020",
-              "technology": "C# / .NET, WPF, Android SDK, Java, Flutter"
+              "technology": [
+                "C# / .NET, WPF",
+                "Android SDK, Java, Flutter"
+              ]
             },
             "items": [
               {
@@ -225,7 +236,9 @@
             "details": {
               "role": "Android Developer",
               "dates": "Oct 2019 – Dec 2019",
-              "technology": "Android SDK, Java"
+              "technology": [
+                "Android SDK, Java"
+              ]
             },
             "items": []
           }
@@ -239,7 +252,9 @@
             "details": {
               "role": "Android Developer",
               "dates": "Feb 2017 – Aug 2017",
-              "technology": "Android SDK, Java"
+              "technology": [
+                "Android SDK, Java"
+              ]
             },
             "items": [
               {
@@ -263,7 +278,9 @@
             "details": {
               "role": "Android Developer",
               "dates": "Apr 2015 – Mar 2018",
-              "technology": "C# / .NET, Android SDK, Xamarin"
+              "technology": [
+                "C# / .NET, Android SDK, Xamarin"
+              ]
             },
             "items": [
               {
@@ -296,7 +313,9 @@
             "details": {
               "role": "Web Developer",
               "dates": "Mar 2013 – Sep 2013",
-              "technology": "PHP, HTML, CSS"
+              "technology": [
+                "PHP, HTML, CSS"
+              ]
             },
             "items": [
               {
@@ -320,7 +339,9 @@
         "details": {
           "role": "Web Developer",
           "dates": "2010 – 2013",
-          "technology": "PHP, HTML, CSS, JavaScript / jQuery, OpenCart, WordPress"
+          "technology": [
+            "PHP, HTML, CSS, JavaScript / jQuery, OpenCart, WordPress"
+          ]
         },
         "items": [
           {

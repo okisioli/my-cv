@@ -1,4 +1,7 @@
 #import "variables.typ" as theme
+#import "@preview/cmarker:0.1.10"
+
+#let markdown(source) = cmarker.render(source, raw-typst: false)
 
 // Shared marker appearance for skills and achievements. Scaling is visual only,
 // so the heavier, larger characters do not increase line spacing.
@@ -14,10 +17,7 @@
   == #title #theme.company-heading-style.marker
 ]
 
-#let section-rule = block(..theme.section-rule-spacing)
-[
-  #line(..theme.section-rule-line)
-]
+#let project-separator = block(..theme.project-separator-spacing)
 
 #let tip(body) = block(..theme.tip-style)[
   *Tip:* #body
@@ -54,29 +54,16 @@
   ]
 )
 
-#let block-personal(name, projects) = block(
-  inset: theme.experience-entry-inset,
-  [
-    #block()[
-      #text()[
-        #name
-        #projects
-      ]
-    ]
-  ]
-)
-
-// Employment is the default; use false for freelance or personal project lists.
-#let block-project(intro, role, dates, tech, achievements, is-employment: true) = block(
+#let block-project(intro, details, items, items-heading) = block(
   grid(
   columns: (5fr, 2fr), [
     #block(below: theme.project-intro-spacing)[
       #intro
     ]
-    #if achievements != [] [
-      === #if is-employment [Key achievements] else [Some of the projects]
+    #if items != [] [
+      === #items-heading
       // Reuse the skills lists' left offset without changing their spacing rules.
-      #pad(left: theme.skills-list-left-margin, achievements)
+      #pad(left: theme.skills-list-left-margin, items)
     ]
   ],
   [
@@ -89,17 +76,17 @@
               columns: 1fr,
               [#block(inset: theme.project-details-style.role-inset)[
                 #text(fill: theme.project-details-style.label-color)[
-                  #theme.details-label(role)
+                  #theme.details-label(details.role)
                 ]
               ]],
               [#block(inset: theme.project-details-style.dates-inset)[
                 #text(fill: theme.project-details-style.label-color)[
-                  #theme.details-label(dates)
+                  #theme.details-label(details.dates)
                 ]
               ]],
               [#block(inset: theme.project-details-style.tech-inset)[
                 #text()[
-                  #theme.details-tech(tech)
+                  #theme.details-tech(details.technology.join(",\n"))
                 ]
               ]]
             )
@@ -121,7 +108,7 @@
         [#block(inset: theme.role-details-style.dates-inset)[
           #theme.details-label(dates)
         ]],
-        section-rule,
+        project-separator,
         [#block(inset: theme.role-details-style.tech-inset)[
           #theme.details-tech(tech)
         ]]
@@ -166,6 +153,118 @@
   ..theme.info-table-style,
   ..args,
 )
+
+#let header(profile) = block-header(
+  grid(
+    columns: (2fr, 1fr),
+    [
+      #profile-title(
+        profile.name,
+        profile.role,
+        [#profile.location.city, #strong(profile.location.country)],
+      )
+      #block[
+        #profile.contacts.map(contact => [
+          #strong(contact.label): #link(contact.url, contact.display)
+        ]).join(linebreak())
+      ]
+    ],
+    profile-photo("/" + profile.photo),
+  ),
+)
+
+#let introduction-section(introduction) = [
+  #block(inset: theme.heading-padding)[
+    #text(..theme.section-title-text, introduction.title)
+  ]
+  #block-top-2(
+    grid(columns: (5fr, 2fr), markdown(introduction.summary), []),
+  )
+]
+
+#let skills-section(groups) = block-top-1(
+  grid(
+    columns: 1,
+    grid(
+      columns: (1fr,) * groups.len(),
+      gutter: theme.skills-grid-gutter,
+      ..groups.map(group => skills-column(
+        group.title,
+        list(..group.items.map(markdown)),
+      )),
+    ),
+    [],
+  ),
+)
+
+#let project-list(items) = {
+  if items.len() == 0 { return [] }
+  list(..items.map(item => [
+    #markdown(item.text)
+    #project-list(item.at("children", default: ()))
+  ]))
+}
+
+#let project-card(project, items-heading) = block-project(
+  text[
+    #if "title" in project [
+      #block(inset: theme.project-title-inset)[
+        === #project.title
+      ]
+    ]
+    #markdown(project.summary)
+  ],
+  project.at("details", default: (role: "", dates: "", technology: ())),
+  project-list(project.items),
+  items-heading,
+)
+
+#let experience-section(experience, freelance, personal-projects) = {
+  let entries = experience.entries.map(entry => (entry, experience.itemsHeading))
+  entries += ((freelance, freelance.itemsHeading), (personal-projects, personal-projects.itemsHeading))
+  for (index, (entry, items-heading)) in entries.enumerate() {
+    let section = if calc.even(index) { block-top-2 } else { block-top-1 }
+    section[
+      #if index == 0 [
+        #block(inset: theme.experience-heading-inset)[
+          #text(..theme.section-title-text, experience.title)
+        ]
+      ]
+      #block-company(
+        h2(entry.title),
+        entry.projects.map(project => project-card(project, items-heading)).join(project-separator),
+      )
+    ]
+  }
+}
+
+#let footer(languages, education, contact) = block-top-1[
+  #grid(
+    column-gutter: theme.footer-grid-column-gutter,
+    columns: (3fr, 2fr, 2fr),
+    [
+      = #languages.title
+      #info-table(
+        columns: (1fr, 1.5fr),
+        strong(languages.languageHeading), strong(languages.levelHeading),
+        ..languages.entries.map(entry => (entry.language, entry.level)).flatten(),
+      )
+      #block(inset: theme.footer-contact-style.inset)
+      #text(size: theme.footer-contact-style.text-size, contact.phone)
+      #contact.email
+    ],
+    [
+      = #education.title
+      #info-table(
+        columns: (1fr,),
+        strong(education.program),
+        education.institution,
+        education.dates,
+      )
+    ],
+    [],
+  )
+]
 
 // Each section leaves an invisible color marker (see section-block in components.typ).
 // Find the last section that has started by this page, including a section carried
