@@ -10,6 +10,8 @@
   #set page(
     paper: theme.page-paper,
     margin: (top: theme.page-top-padding, bottom: 0pt, x: 0pt),
+    // The Introduction heading and the space below the header sit outside section blocks.
+    fill: if theme.dark-mode { theme.section-color } else { none },
     background: section-page-background(),
     foreground: section-page-borders(),
   )
