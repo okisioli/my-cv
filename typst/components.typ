@@ -1,45 +1,27 @@
-#import "theme.typ": section-padding, page-top-padding, accent-color, accent-list-marker, skills-list-marker, skills-list-left-margin, gray-section-color, white-section-color
+#import "theme.typ" as theme
 
-#let h2(title) = block(below: 1.25em)[
-  == #title #text(fill: accent-color)[█]
+#let h2(title) = block(below: theme.company-heading-style.below)[
+  == #title #theme.company-heading-style.marker
 ]
 
-#let section-rule = block(above: 0.65em, below: 1.5em)
-[ 
-  #line(length: 100%, stroke: 1pt) 
+#let section-rule = block(..theme.section-rule-spacing)
+[
+  #line(..theme.section-rule-line)
 ]
 
-#let tip(body) = block(
-  fill: rgb("#eef6ff"),
-  inset: 0.8em,
-  radius: 4pt,
-  stroke: rgb("#b6d4fe"),
-)[
+#let tip(body) = block(..theme.tip-style)[
   *Tip:* #body
 ]
 
 #let block-header(body) = block(
-  // Extend just the teal background into the page's top margin.
-  outset: (top: page-top-padding),
-  below: 1em,
-  inset: (
-    top: 0.5cm, bottom: 0.95cm,
-    left: 1.5cm, right: 1.5cm
-  ),
-  fill: accent-color,
-  text(
-    fill: rgb("#f0f0f0"),
-    body,
-  ),
+  ..theme.header-style,
+  text(fill: theme.header-text-color, body),
 )
 
 // Shared layout for the two section colors. The marker has no visible content;
 // the page background uses it to continue the last section's color to the bottom.
 #let section-block(fill, body) = block(
-  width: 100%,
-  above: 0em,
-  below: 0em,
-  inset: section-padding,
+  ..theme.section-block-style,
   fill: fill,
   [
     #metadata(fill) <section-background>
@@ -47,11 +29,11 @@
   ],
 )
 
-#let block-top-1(body) = section-block(gray-section-color, body)
-#let block-top-2(body) = section-block(white-section-color, body)
+#let block-top-1(body) = section-block(theme.gray-section-color, body)
+#let block-top-2(body) = section-block(theme.white-section-color, body)
 
 #let block-company(name, projects) = block(
-  inset: (top: 0.2em, bottom: 0.5em, left: 0em, right: 0em),
+  inset: theme.experience-entry-inset,
   [
     #block()[
       #text()[
@@ -63,7 +45,7 @@
 )
 
 #let block-personal(name, projects) = block(
-  inset: (top: 0.2em, bottom: 0.5em, left: 0em, right: 0em),
+  inset: theme.experience-entry-inset,
   [
     #block()[
       #text()[
@@ -78,38 +60,36 @@
 #let block-project(intro, role, dates, tech, achievements, is-employment: true) = block(
   grid(
   columns: (5fr, 2fr), [
-    #block(below: 1.75em)[
+    #block(below: theme.project-intro-spacing)[
       #intro
     ]
     #if achievements != [] [
       === #if is-employment [Key achievements] else [Some of the projects]
       // Reuse the skills lists' left offset without changing their spacing rules.
-      #pad(left: skills-list-left-margin, achievements)
+      #pad(left: theme.skills-list-left-margin, achievements)
     ]
   ],
   [
     #block(
-       inset: (top: 0em, bottom: 0.5em, left: 1.75em, right: 0.75em),
+       inset: theme.project-details-style.inset,
         [
           #align(right)[
             #table(
-              stroke: 0em,
-              inset: 0em,
-              row-gutter: 0.6em,
+              ..theme.project-details-style.table,
               columns: 1fr,
-              [#block(inset: (bottom: 0em))[
-                #text(fill: accent-color)[
-                  *#role*
+              [#block(inset: theme.project-details-style.role-inset)[
+                #text(fill: theme.project-details-style.label-color)[
+                  #theme.details-label(role)
                 ]
               ]],
-              [#block(inset: (bottom: 0em))[
-                #text(fill: accent-color)[
-                  *#dates*
+              [#block(inset: theme.project-details-style.dates-inset)[
+                #text(fill: theme.project-details-style.label-color)[
+                  #theme.details-label(dates)
                 ]
               ]],
-              [#block(inset: (top: 0em))[
+              [#block(inset: theme.project-details-style.tech-inset)[
                 #text()[
-                  #emph(tech)
+                  #theme.details-tech(tech)
                 ]
               ]]
             )
@@ -121,68 +101,58 @@
 )
 
 #let block-role(role, dates, tech) = block(
-  //stroke: 0.1em,
-  inset: (top: 0.5em, bottom: 0.5em, left: 1.75em, right: 0.75em),
+  inset: theme.role-details-style.inset,
   [
     #align(right)[
       #table(
-        stroke: 0em,
-        inset: 0em,
-        row-gutter: 0.75em,
+        ..theme.role-details-style.table,
         columns: 1fr,
-        [*#role*],
-        [#block(inset: (bottom: 0.5em))[
-          *#dates*
+        [#theme.details-label(role)],
+        [#block(inset: theme.role-details-style.dates-inset)[
+          #theme.details-label(dates)
         ]],
         section-rule,
-        [#block(inset: (top: 0.5em))[
-          #emph(tech)
+        [#block(inset: theme.role-details-style.tech-inset)[
+          #theme.details-tech(tech)
         ]]
       )
     ]
   ]
 )
 
-#let profile-title(name, role, location) = block(below: 2em, inset: (top: 0.5em))[
-  #text(size: 36pt, weight: "light", name)
+#let profile-title(name, role, location) = block(..theme.profile-title-style.block)[
+  #text(..theme.profile-title-style.name, name)
 
-  #block(above: 2.25em)[
-    #text(size: 14pt, style: "italic", role)
+  #block(above: theme.profile-title-style.role-spacing)[
+    #text(..theme.profile-title-style.role, role)
   ]
 
-  #block(above: 0.75em)[
-    #text(size: 12pt, location)
+  #block(above: theme.profile-title-style.location-spacing)[
+    #text(..theme.profile-title-style.location, location)
   ]
 ]
 
 #let profile-photo(path) = align(right)[
-  #image(path, width: 4.5cm)
+  #image(path, width: theme.profile-photo-width)
 ]
 
 #let skills-column(heading, body) = [
   // Skills keep their own symbol, with the same appearance as achievements.
-  #block(below: 1.8em, inset: (top: 0.5em, left: -0.125em))[
-    #text(size: 1.3em, fill: accent-color)[
+  #block(..theme.skills-column-style.heading-block)[
+    #text(..theme.skills-column-style.heading-text)[
       #heading
     ]
   ]
-  #set list(marker: accent-list-marker(skills-list-marker))
-  #show list.where(): it => block(inset: (
-    left: skills-list-left-margin,
-    top: 0em,
-    // bottom: if practices { -1.5em } else { -1em },
-  ))[
+  #set list(marker: theme.accent-list-marker(theme.skills-list-marker))
+  #show list.where(): it => block(inset: theme.skills-column-style.list-inset)[
     #it
   ]
-  #text(size:1.1em)[
+  #text(size: theme.skills-column-style.body-size)[
     #body
   ]
 ]
 
 #let info-table(..args) = table(
-  inset: 0pt,
-  gutter: 1em,
-  column-gutter: 1em,
-  stroke: 0pt,
+  ..theme.info-table-style,
   ..args,
 )
