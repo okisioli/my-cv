@@ -1,0 +1,21 @@
+name: Build CV Dark
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-2025
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v7
+
+      - name: Build dark PDF
+        uses: ./.github/actions/build-cv
+        with:
+          mode: dark

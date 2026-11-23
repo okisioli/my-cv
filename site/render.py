@@ -5,7 +5,7 @@ and supplied by Actions; GITHUB_REPOSITORY supplies the Markdown link context.
 README.md and PROJECTS.md supply /cv/ and /projects/. The welcome page is HTML.
 Edit index.html for welcome copy, page.html for the shared Markdown page wrapper,
 and style.css for presentation. No Markdown content is duplicated in HTML.
-The publish workflow combines this output with the existing Windows-built PDF.
+The publish workflow combines this output with both Windows-built PDFs.
 """
 
 import json
@@ -56,11 +56,10 @@ def main():
         ("PROJECTS.md", "projects", "Projects", "Oliver's personal projects."),
     ):
         markdown = (root / filename).read_text(encoding="utf-8")
-        # Keep the README intact and the PDF at its existing public /cv.pdf URL.
+        # The README uses absolute links so its downloads also work on GitHub.
         if filename == "README.md":
-            markdown = markdown.replace(
-                "https://oli-g-sk.github.io/this-is-my-cv/cv.pdf", "../cv.pdf"
-            )
+            for pdf in ("cv-light.pdf", "cv-dark.pdf"):
+                markdown = markdown.replace(f"https://okisioli.github.io/my-cv/{pdf}", f"../{pdf}")
         page = template.substitute(
             title=title,
             description=description,

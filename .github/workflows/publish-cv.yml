@@ -1,4 +1,4 @@
-name: Publish CV
+name: Build CV Light
 
 on:
   push:
@@ -38,53 +38,26 @@ jobs:
           retention-days: 1
 
   # Render on Windows, where Bahnschrift is installed.
-  # Pass the PDF to the deployment job as an artifact.
-  build:
-    if: github.ref == 'refs/heads/main'
+  build-light:
     runs-on: windows-2025
 
     steps:
       - name: Checkout source
         uses: actions/checkout@v7
 
-      - name: Install Typst
-        uses: typst-community/setup-typst@v5
+      - name: Build light PDF
+        uses: ./.github/actions/build-cv
         with:
-          typst-version: "0.15.1"
+          mode: light
 
-      - name: Verify Bahnschrift is available
-        shell: pwsh
-        run: |
-          $fonts = typst fonts
-          if ($LASTEXITCODE -ne 0) {
-            throw "Could not list fonts."
-          }
-          if (-not ($fonts -match 'Bahnschrift')) {
-            throw "Bahnschrift is unavailable on this runner."
-          }
-
-      - name: Build PDF
-        shell: pwsh
-        run: |
-          New-Item -ItemType Directory -Force -Path build | Out-Null
-          typst compile cv.typ build/cv.pdf
-          if ($LASTEXITCODE -ne 0) {
-            throw "CV compilation failed."
-          }
-
-      - name: Upload PDF
-        uses: actions/upload-artifact@v7
-        with:
-          name: cv-pdf
-          path: build/cv.pdf
-          if-no-files-found: error
-          retention-days: 1
+  build-dark:
+    uses: ./.github/workflows/build-cv-dark.yml
 
   # Publish on Ubuntu, which supports the Pages deployment actions.
-  # Uses the PDF built on Windows without needing its fonts.
+  # Both PDFs are packaged with the same site deployment.
   deploy:
     if: github.ref == 'refs/heads/main'
-    needs: [build, build-site]
+    needs: [build-light, build-dark, build-site]
     runs-on: ubuntu-24.04
 
     permissions:
@@ -103,10 +76,11 @@ jobs:
           name: cv-site
           path: build/public
 
-      - name: Download PDF
+      - name: Download PDFs
         uses: actions/download-artifact@v8
         with:
-          name: cv-pdf
+          pattern: cv-@(light|dark)
+          merge-multiple: true
           path: build/public
 
       - name: Configure Pages
