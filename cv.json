@@ -1,0 +1,349 @@
+{
+  "document": {
+    "title": "Oliver Gašpar CV",
+    "author": "Oliver Gašpar"
+  },
+  "profile": {
+    "name": "Oliver Gašpar",
+    "role": "Senior Software Engineer",
+    "location": {
+      "city": "Brno",
+      "country": "Czech Republic"
+    },
+    "photo": "assets/photo.jpg",
+    "contacts": [
+      {
+        "label": "Phone",
+        "url": "tel:+421949853547",
+        "display": "+421 949 853 547"
+      },
+      {
+        "label": "E-mail",
+        "url": "mailto:oliver.g.sk@gmail.com",
+        "display": "oliver.g.sk@gmail.com"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/oliver-gašpar-b8281852",
+        "display": "linkedin.com/in/oliver-gašpar-b8281852"
+      },
+      {
+        "label": "Github",
+        "url": "https://github.com/oli-g-sk",
+        "display": "github.com/oli-g-sk"
+      }
+    ]
+  },
+  "introduction": {
+    "title": "Introduction",
+    "summary": "Software engineer with **15 years of experience** building **desktop, web, and mobile** applications, primarily in the **.NET ecosystem**. Equally comfortable working across the full stack, from **native UI development** to **backend services** or **API design**.\n\nI also enjoy **modernizing legacy systems**, reducing technical debt, improving developer workflows, and delivering software that is both _intuitive for users_ and _maintainable for engineering_ teams.\n\nThese days, I'm upgrading my workflow by utilizing **cloud-native development practices** and super-charging it with **AI-assisted development _where appropriate_**."
+  },
+  "skills": [
+    {
+      "title": "Languages & Tech stack",
+      "items": [
+        "**C\\# / .NET Core**, Framework",
+        "**ASP.NET Core**, Blazor",
+        "**REST API**, gRPC, Webhooks",
+        "Entity Framework / **EF Core**",
+        "**WPF**, Windows Forms",
+        "**Avalonia**, MAUI, Xamarin",
+        "**PostgreSQL**, MS SQL Server",
+        "**Android SDK**, Flutter, Jetpack",
+        "**Java**, Spring Boot, JOOQ,"
+      ]
+    },
+    {
+      "title": "Architecture & Practices",
+      "items": [
+        "**MVVM** Model-View-ViewModel",
+        "**Dependency Injection (DI)**",
+        "Inversion of Control (IoC)",
+        "**Agentic Engineering**",
+        "Test-Driven Development",
+        "Performance Optimization",
+        "Refactoring, Code Reviews",
+        "Continuous Integration (CI)",
+        "UI / UX Design"
+      ]
+    },
+    {
+      "title": "Tools",
+      "items": [
+        "**Git**, **Docker**",
+        "**Codex**, **Claude Code**",
+        "**Github Actions**",
+        "**Supabase**",
+        "Automation, no-code, **n8n**",
+        "Firebase",
+        "Sentry",
+        "Azure DevOps, Jenkins",
+        "Jira, Confluence"
+      ]
+    }
+  ],
+  "experience": {
+    "title": "Professional experience",
+    "itemsHeading": "Key achievements",
+    "entries": [
+      {
+        "title": "Bagira Systems",
+        "projects": [
+          {
+            "summary": "Worked on **eliminating third-party UI dependencies** (DevExpress) in favor of an in-house UI framework.",
+            "details": {
+              "role": ".NET Developer",
+              "dates": "Nov 2025 – Feb 2026",
+              "technology": [
+                "C# / .NET, WPF"
+              ]
+            },
+            "items": [
+              "Integrated key parts of a **custom WPF framework** into a mission-critical application under a tight deadline.",
+              "Added meaningful improvements to several custom widgets to support their **long-term usability** and maintainability."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Chyron",
+        "projects": [
+          {
+            "title": "PRIME",
+            "summary": "Worked on the company's **flagship broadcast graphics platform** with a real-time playout system where **reliability and responsiveness** were **_critical_**.",
+            "details": {
+              "role": ".NET Developer",
+              "dates": "Sep 2022 – Oct 2025",
+              "technology": [
+                "C# / .NET, WPF, WinForms, ASP.NET Core, gRPC, Jenkins"
+              ]
+            },
+            "items": [
+              "Delivered **UX and usability improvements** ahead of a major sports event, earning **direct recognition from NBC**.",
+              "**Refactored operation-critical components**, eliminating a long-standing defect responsible for recurring customer issues.",
+              "**Improved stability and maintainability** of a **complex hybrid WPF/Windows Forms** application through bug fixes, refactoring, and modernization efforts.",
+              "Developed new features and maintained production-critical functionality.",
+              "Contributed to the ongoing migration from Windows Forms to WPF.",
+              "Created **internal tools** that improved productivity for developers and SQA."
+            ]
+          },
+          {
+            "title": "LIVE",
+            "summary": "Took a major part in building a greenfield project -- **a cloud-oriented platform** exposing the functionality of the company's primary product through web technologies.",
+            "details": {
+              "role": ".NET Developer",
+              "dates": "Oct 2021 – Sep 2022",
+              "technology": [
+                "C# / .NET, ASP.NET Core, gRPC, Mapster, xUnit"
+              ]
+            },
+            "items": [
+              "Developed backend services using **ASP.NET Core**.",
+              "Implemented **new API endpoints** and exposed them through **gRPC**.",
+              "**Integrated a major audio-mixing feature** from the previous project.",
+              "Maintained strong focus on code quality and **test-driven development**."
+            ]
+          },
+          {
+            "title": "PRIME Switcher",
+            "summary": "Worked in a small team building a new, specialized product wrapped around the company's established broadcast platform.",
+            "details": {
+              "role": ".NET Developer",
+              "dates": "Oct 2020 – Sep 2021",
+              "technology": [
+                "C# / .NET, WPF"
+              ]
+            },
+            "items": [
+              "Had a voice in shaping a brand-new product on top of an established",
+              "**Was responsible for** major parts of the **new UI and features**.",
+              "Contributed to **engine-level features** and business logic."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Turing Technology",
+        "projects": [
+          {
+            "summary": "Worked on multiple short- and long-term **projects across platforms and stacks** in a fast-growing, fintech-focused startup.",
+            "details": {
+              "role": "Software Developer",
+              "dates": "Apr 2018 – Sep 2020",
+              "technology": [
+                "C# / .NET, WPF",
+                "Android SDK, Java, Flutter"
+              ]
+            },
+            "items": [
+              "Independently developed a **native Android** application in Java **from scratch**.",
+              "Delivered a **polished UI** ready for backend integration.",
+              "Joined development of a Forex trading **desktop platform**.",
+              "Led major parts of **WPF UI** implementation and performance optimization.",
+              "Contributed to **architecture decisions** and engineering best practices.",
+              "Experimented with **Flutter** as part of internal research efforts."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "EmbedIT",
+        "projects": [
+          {
+            "summary": "Short-term **Android development** engagement involving updating and maintaining an internal native application developed in Java and Kotlin.\n\nNew experience in deploying a production-level product into multiple environments, countries and markets, each carrying its own specifics.",
+            "details": {
+              "role": "Android Developer",
+              "dates": "Oct 2019 – Dec 2019",
+              "technology": [
+                "Android SDK, Java"
+              ]
+            },
+            "items": []
+          }
+        ]
+      },
+      {
+        "title": "Cleevio",
+        "projects": [
+          {
+            "summary": "Worked on **multiple Android projects** for a well-recognized development house responsible for award-winning apps like Spendee.",
+            "details": {
+              "role": "Android Developer",
+              "dates": "Feb 2017 – Aug 2017",
+              "technology": [
+                "Android SDK, Java"
+              ]
+            },
+            "items": [
+              "Deliveder a small, interactive Android app aimed at children by myself",
+              "**Integrated video advertising** into the mobile application of a **major Czech radio** station.",
+              "Worked on a new application combining concepts from recruitment platforms and social-media-style stories in a small team of three."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "YouWakeMe",
+        "projects": [
+          {
+            "summary": "Developed a **cross-platform mobile app** combining an alarm clock with social media features as part of a **two-person team**.",
+            "details": {
+              "role": "Android Developer",
+              "dates": "Apr 2015 – Mar 2018",
+              "technology": [
+                "C# / .NET, Android SDK, Xamarin"
+              ]
+            },
+            "items": [
+              "**Owned Android implementation** and most platform-specific integrations.",
+              "Collaborated on UI design, adapting shared designs to Android while **advocating for native Android user experience**.",
+              "**Integrated observability platforms** like Firebase Crashlytics and Sentry",
+              "**Migrated our version control** system of choice from TFS **to Git**",
+              "Helped shape a unique concept combining an alarm clock with social networking features.",
+              "The released app **won both main awards at Czech AppParade 25**."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Masaryk University",
+        "projects": [
+          {
+            "summary": "Short term assignment during my studies of computer science at the university, and first experience with maintaining real-world, production-grade systems and a relatively high-traffic website.",
+            "details": {
+              "role": "Web Developer",
+              "dates": "Mar 2013 – Sep 2013",
+              "technology": [
+                "PHP, HTML, CSS"
+              ]
+            },
+            "items": [
+              "Developed and maintained public-facing websites for the Faculty of Law.",
+              "Developed and **maintained internal systems** used by the faculty's employees, researchers and external collaborators."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "freelance": {
+    "itemsHeading": "Some of the projects",
+    "title": "Freelance Work",
+    "projects": [
+      {
+        "summary": "Developed and maintained **web applications** and websites, often with a **custom lightweight CMS**, and handled **most of the UI design** work.",
+        "details": {
+          "role": "Web Developer",
+          "dates": "2010 – 2013",
+          "technology": [
+            "PHP, HTML, CSS, JavaScript / jQuery, OpenCart, WordPress"
+          ]
+        },
+        "items": [
+          "A **Slovak equivalent of Groupon** (a local deals aggregator), for which I handled the entire front end and visual design",
+          "Modernization and maintenance of an **OpenCart-based e-commerce website** for a nationwide retailer of bicycle parts and accessories",
+          "Redesign of several websites for a Prague-based business offering city tours, experiences, and stag parties",
+          "A complete website for a small, family-run tennis coaching business",
+          "Website for a local non-profit helping women with cancer"
+        ]
+      }
+    ]
+  },
+  "personalProjects": {
+    "itemsHeading": "Some of the projects",
+    "title": "Personal Projects & Open-Source",
+    "projects": [
+      {
+        "summary": "I really love building software in my spare time as well, either to come up with the \"next big thing\", or because I thought of an interesting technical challenge or experiment to try.",
+        "items": [
+          {
+            "text": "An experimental suite of .NET apps with an **unique approach to getting familiar with a foreign language**. Uses **OpenAI APIs**, and consists mostly of...",
+            "children": [
+              "A **Telegram Bot** that **tranlates** text, **transcribes** voice messages, and **speaks** to you in the language of your choosing",
+              "A web UI which provides **subtitles for social media content** (Reels, TikToks, YouTube) in the chosen language",
+              "An **ASP.NET** app serving both above use cases",
+              "A **desktop GUI** for further fine-tuning the translated content"
+            ]
+          },
+          "A personal **spending tracking app with an LLM twist**. Cross-platform, made in .NET using **Avalonia**, with **backend-as-a-service** through **Supabase**.",
+          "**Android app turning** user's favorite **camera roll footage into live wallpapers**, chosen on random on every screen unlock",
+          "Early-stage **restaurant rating** application with an unique take on the discovery experience, build on the **Java** stack with Spring Boot.",
+          "A developer-focused **static site generator** (or, a .NET project template) to bootstrap a site on GitHub Pages with minimum effort, backed by **JSON content**"
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "title": "Languages",
+    "languageHeading": "Language",
+    "levelHeading": "Level",
+    "entries": [
+      {
+        "language": "English",
+        "level": "Fluent"
+      },
+      {
+        "language": "Slovak",
+        "level": "Native"
+      },
+      {
+        "language": "Czech",
+        "level": "Native"
+      },
+      {
+        "language": "German",
+        "level": "Elementary"
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "program": "Applied Informatics",
+    "institution": "Masaryk University, Brno",
+    "dates": "2009–2014"
+  },
+  "footerContact": {
+    "phone": "+421949853547",
+    "email": "oliver.g.sk@gmail.com"
+  }
+}
