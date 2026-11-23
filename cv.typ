@@ -1,6 +1,7 @@
 #set document(title: "Oliver Gašpar CV", author: "Oliver Gašpar")
-#import "./typst/theme.typ": *
-#import "./typst/components.typ": *
+#import "themes/default/theme.typ": cv-theme
+#import "themes/default/components.typ": *
+#import "themes/default/variables.typ": *
 
 #show: cv-theme
 
@@ -19,7 +20,7 @@
       #section-contact()
     ],
     [
-      #profile-photo("../assets/photo.jpg")
+      #profile-photo("../../assets/photo.jpg")
     ]
   )
 )
