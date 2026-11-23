@@ -28,8 +28,8 @@
   ],
 )
 
-#let block-top-1(body) = section-block(theme.gray-section-color, body)
-#let block-top-2(body) = section-block(theme.white-section-color, body)
+#let block-top-1(body) = section-block(theme.alternate-section-color, body)
+#let block-top-2(body) = section-block(theme.section-color, body)
 
 // Each section leaves an invisible color marker (see section-block in components.typ).
 // Find the last section that has started by this page, including a section carried
@@ -90,7 +90,7 @@
       if previous.value != section.value {
         place(top + left, dy: boundary-y, line(
           length: 100%,
-          stroke: theme.gray-section-border,
+          stroke: theme.section-border,
         ))
       }
     }
