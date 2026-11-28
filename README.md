@@ -1,4 +1,4 @@
-# Hello, I'm Oliver, and this is my CV 👋
+# 👋 Hello, I'm Oliver, and this is my CV
 
 If you're seeing this, it's likely that I'm actively or passively looking for new opportunities.
 You can find more information about me, my coding experience, and personal projects in this resume.
@@ -12,7 +12,7 @@ You can find more information about me, my coding experience, and personal proje
 If you're still reading, please continue. You can [view the CV in its raw form right here on GitHub](https://github.com/okisioli/my-cv/blob/main/cv.json).
 If you prefer a more traditional PDF-like experience, there's two ways to get it up and running.
 
-## Build it yourself (recommended) 🛠️
+## 🛠️ Build it yourself (recommended)
 
 ### Install Typst
 
@@ -35,7 +35,7 @@ If the default CV is too bright, you can compile it with the lights off.
 typst compile --input mode=dark cv.typ cv-dark.pdf
 ```
 
-## Download the PDF 📦
+## 📦 Download the PDF
 
 For your convenience (and HR), an up-to-date version can be downloaded below:
 
